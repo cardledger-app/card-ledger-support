@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー｜カード台帳</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 24px 20px 80px; max-width: 720px;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    line-height: 1.8; color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #111; } }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 40px 0 8px; padding-top: 16px; border-top: 1px solid rgba(128,128,128,.3); }
+  .updated { color: #888; font-size: .9rem; margin-bottom: 32px; }
+  ul { padding-left: 1.3em; }
+  code { background: rgba(128,128,128,.15); padding: 2px 5px; border-radius: 4px; font-size: .9em; }
+  .note { background: rgba(128,128,128,.1); border-left: 3px solid #6b8afd; padding: 12px 16px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>プライバシーポリシー</h1>
+<p class="updated">カード台帳（Card Ledger）／最終更新 2026年8月13日</p>
+
+<p>
+  カード台帳（以下「本アプリ」）は、トレーディングカードの仕入れ・鑑定・売却を
+  記録するための個人用の台帳アプリです。本アプリにおける利用者の情報の扱いを、
+  以下のとおり定めます。
+</p>
+
+<div class="note">
+  <strong>本アプリは、利用者の情報を収集しません。</strong>
+  会員登録はなく、開発者が利用者のデータを受け取る仕組みを持っていません。
+</div>
+
+<h2>1. 収集しない情報</h2>
+<p>本アプリは、以下のいずれも行いません。</p>
+<ul>
+  <li>氏名・メールアドレス・電話番号などの個人情報の取得</li>
+  <li>会員登録、ログイン、アカウントの作成</li>
+  <li>利用状況の解析（アクセス解析ツール等の組み込み）</li>
+  <li>広告の配信、および広告目的の識別子の取得</li>
+  <li>位置情報の取得</li>
+  <li>連絡先・カレンダー等、端末内の他のアプリのデータへのアクセス</li>
+</ul>
+
+<h2>2. 端末内に保存される情報</h2>
+<p>
+  利用者が入力・撮影した以下の情報は、<strong>すべて利用者の端末内にのみ保存されます。</strong>
+  外部のサーバーへ送信されることはありません。
+</p>
+<ul>
+  <li>カードの名称・型式・グレード・証明書番号</li>
+  <li>仕入額・経費・売値・時価などの金額、および仕入先・日付</li>
+  <li>鑑定への申込（バッチ）の記録</li>
+  <li>利用者が撮影・選択したカードの写真</li>
+  <li>価格の推移として蓄積した記録</li>
+  <li>利用者が任意で設定した外部サービスのアプリID（後述）</li>
+</ul>
+<p>
+  これらはアプリを削除すると端末から消去されます。開発者はこれらを閲覧できません。
+  バックアップが必要な場合は、アプリの書き出し機能（CSV）をご利用ください。
+  書き出したファイルの送り先は利用者が選びます。
+</p>
+
+<h2>3. カメラと写真へのアクセス</h2>
+<p>
+  カードの写真を記録するために、カメラおよび写真ライブラリへのアクセスを求めることがあります。
+  許可は任意で、拒否しても本アプリの他の機能は利用できます。
+  取得した写真は端末内に保存され、外部へ送信されません。
+</p>
+
+<h2>4. 外部サービスへの通信</h2>
+<p>
+  カードの情報と市場価格を表示するため、本アプリは以下の外部サービスへ
+  通信を行います。<strong>いずれの通信にも、利用者を識別する情報は含まれません。</strong>
+  送信されるのは、カード名や型式など、参照するカードを特定するための語句のみです。
+</p>
+<ul>
+  <li>ポケモンカードゲーム公式サイト（www.pokemon-card.com）— カード情報および画像</li>
+  <li>TCGdex（api.tcgdex.net / assets.tcgdex.net）— カード情報および画像</li>
+  <li>みんなのポケカ相場（pokeca-chart.com）— 市場価格</li>
+  <li>magi（magi.camp）— 市場価格および商品画像</li>
+  <li>カードラッシュ（www.cardrush-pokemon.jp）— 商品画像</li>
+  <li>楽天市場 商品検索API（app.rakuten.co.jp）— 市場価格（任意設定）</li>
+  <li>Yahoo!ショッピング 商品検索API（shopping.yahooapis.jp）— 市場価格（任意設定）</li>
+  <li>TCG Price Lookup（api.tcgpricelookup.com）— 海外市場価格（任意設定）</li>
+  <li>ExchangeRate-API（open.er-api.com）— 為替レート</li>
+</ul>
+<p>
+  これらのサービスにおける情報の取り扱いは、各サービスの定めに従います。
+  通信の際、接続元のIPアドレスなど、通信に伴って一般に生じる情報が
+  各サービス側に記録される場合があります。
+</p>
+
+<h2>5. 外部サービスのアプリIDについて</h2>
+<p>
+  楽天市場・Yahoo!ショッピング・TCG Price Lookup の各サービスは、利用者ご自身が
+  無料で取得したアプリID（APIキー）を設定画面に入力することで利用できます。
+  入力されたアプリIDは<strong>端末内にのみ保存され</strong>、当該サービスへの
+  問い合わせ以外に使用されません。開発者はこれを取得しません。
+  設定は任意で、入力しなくても本アプリは動作します。
+</p>
+
+<h2>6. 第三者への提供</h2>
+<p>
+  本アプリは利用者の情報を保有していないため、第三者への提供、譲渡、
+  および販売を行うことはありません。
+</p>
+
+<h2>7. お子様の利用について</h2>
+<p>
+  本アプリは特定の年齢層を対象としたものではありませんが、
+  年齢に関する情報を含め、いかなる個人情報も収集しません。
+</p>
+
+<h2>8. 権利表示</h2>
+<p>
+  本アプリに表示されるカードの名称および画像に関する権利は、
+  株式会社ポケモン、任天堂株式会社、株式会社クリーチャーズ、
+  株式会社ゲームフリーク、およびその他の各権利者に帰属します。
+  本アプリは、これらの企業が製作、承認、後援、または推奨するものではありません。
+</p>
+
+<h2>9. 本ポリシーの変更</h2>
+<p>
+  本ポリシーの内容を変更する場合は、このページを更新し、
+  上部の最終更新日を改めます。
+</p>
+
+<h2>10. お問い合わせ</h2>
+<p>
+  本ポリシーおよび本アプリに関するお問い合わせは、
+  <a href="./support.html">サポートページ</a>に記載の連絡先までお願いいたします。
+</p>
+
+</body>
+</html>
