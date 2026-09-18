@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cardledger-app.github.io/card-ledger-support/sitemap.xml

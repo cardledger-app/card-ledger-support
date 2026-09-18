@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PSA鑑定に出すべきか ｜ 期待値で仕入れ上限を決める</title>
+<meta name="description" content="素体の何倍になるかだけを見ると損をします。PSA10が付かなかった場合と鑑定料・売却手数料を入れた期待値の出し方、仕入れの上限価格の決め方。">
+<link rel="canonical" href="https://cardledger-app.github.io/card-ledger-support/guide/psa-kantei.html">
+<link rel="stylesheet" href="./style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PSA鑑定に出すべきか ｜ 期待値で仕入れ上限を決める">
+<meta property="og:description" content="倍率だけを見ると、6.7倍の銘柄でも赤字になります。">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+"headline":"PSA鑑定に出すべきか ｜ 期待値で仕入れ上限を決める",
+"description":"PSA10が付かなかった場合と鑑定料・売却手数料を入れた期待値の出し方。",
+"datePublished":"2026-09-18","dateModified":"2026-09-18",
+"mainEntityOfPage":"https://cardledger-app.github.io/card-ledger-support/guide/psa-kantei.html"}
+</script>
+</head>
+<body>
+
+<p class="crumb"><a href="../">カード台帳</a> ＞ <a href="./">実務ガイド</a></p>
+
+<h1>PSA鑑定に出すべきか</h1>
+<p class="lead">「素体の何倍になるか」だけを見ていると、倍率の高い銘柄で負けます。</p>
+<p class="date">2026年9月18日</p>
+
+<p>
+  素体が 3,000円、PSA10 が 20,000円。<strong>6.7倍</strong>。
+  出せば勝てるように見えます。実際にはこの情報だけでは判断できません。
+  足りていないものが 3 つあるからです。
+</p>
+
+<ul>
+  <li><strong>PSA10 が付かなかったとき</strong>にいくらで売れるのか</li>
+  <li><strong>鑑定料</strong>（送料・代行手数料込みで 1 枚あたりいくらか）</li>
+  <li><strong>売却手数料</strong>（売れた額がそのまま手元に残るわけではない）</li>
+</ul>
+
+<h2>計算式</h2>
+
+<div class="note">
+  <p><strong>期待値 ＝（10率×PSA10価格 ＋ 9率×PSA9価格 ＋ 残り×素体価格）×（1 − 売却手数料率）− 鑑定料</strong></p>
+</div>
+
+<p>
+  10率・9率は「その銘柄が過去に鑑定されたとき、PSA10 が何％付いたか」です。
+  PSA が母数を公開しているので、銘柄ごとに分かります。
+  8 以下は素体と同じ値段が付くものとして数えます
+  （実際にはスラブ入りの低評価は素体より安いこともあるので、<strong>やや甘い見積り</strong>です）。
+</p>
+
+<h2>数字を入れてみる</h2>
+
+<p>条件はこうします。鑑定料は 1 枚 4,000円（往復の送料・代行手数料込み）、売却手数料 10%。</p>
+
+<h3>ケースA：10率が 40% の銘柄</h3>
+
+<table>
+  <tr><th>項目</th><th class="num">値</th></tr>
+  <tr><td>素体価格</td><td class="num">3,000円</td></tr>
+  <tr><td>PSA10 価格</td><td class="num">20,000円</td></tr>
+  <tr><td>PSA9 価格</td><td class="num">8,000円</td></tr>
+  <tr><td>10率 ／ 9率 ／ 残り</td><td class="num">40% ／ 35% ／ 25%</td></tr>
+</table>
+
+<p>
+  0.40×20,000 ＋ 0.35×8,000 ＋ 0.25×3,000 ＝ <strong>11,550円</strong><br>
+  11,550 × 0.9 − 4,000 ＝ <strong>6,395円</strong>
+</p>
+
+<p>
+  期待値は 6,395円。素体を 3,000円で買えているので、1 枚あたり
+  <strong>およそ 3,400円の取り分</strong>です。出す価値があります。
+  そして<strong>素体が 6,395円を超えたら、出しても合いません</strong>。これが仕入れの上限です。
+</p>
+
+<h3>ケースB：同じ倍率でも、10率が 15% だったら</h3>
+
+<p>素体も PSA10 価格もケースAと同じ。6.7倍という見出しも同じです。違うのは 10率だけ。</p>
+
+<table>
+  <tr><th>項目</th><th class="num">値</th></tr>
+  <tr><td>10率 ／ 9率 ／ 残り</td><td class="num">15% ／ 30% ／ 55%</td></tr>
+</table>
+
+<p>
+  0.15×20,000 ＋ 0.30×8,000 ＋ 0.55×3,000 ＝ <strong>7,050円</strong><br>
+  7,050 × 0.9 − 4,000 ＝ <strong>2,345円</strong>
+</p>
+
+<div class="warn">
+  <p>
+    期待値 2,345円に対して、素体は 3,000円。
+    <strong>1 枚出すごとに 655円の赤字です。</strong>
+    倍率は 6.7倍のまま、見出しの数字は何も変わっていません。
+    <strong>倍率は判断材料になりません。</strong>
+  </p>
+</div>
+
+<h2>どこに効くのか</h2>
+
+<p>式を見ると、効き方の大きさが分かります。</p>
+
+<table>
+  <tr><th>変数</th><th>効き方</th></tr>
+  <tr><td><strong>10率</strong></td><td>いちばん大きい。ここが 2 倍違えば結論が裏返る</td></tr>
+  <tr><td><strong>鑑定料</strong></td><td>そのまま全額引かれる。安い銘柄ほど比率として重い</td></tr>
+  <tr><td>PSA10 価格</td><td>10率を掛けたぶんしか効かない</td></tr>
+  <tr><td>PSA9 価格</td><td>見落とされがちだが、9 が付く確率は 10 より高いことが多い</td></tr>
+</table>
+
+<p>
+  <strong>安いカードは、鑑定に出しても基本的に合いません。</strong>
+  素体 1,000円のカードに 4,000円かけるなら、PSA10 価格が最低でも 1 万円を
+  超えていて、かつ 10率が高くないと届きません。
+  鑑定料は枚数に比例するので、まとめて出しても 1 枚あたりは安くなりません
+  （バルク料金がある場合を除きます）。
+</p>
+
+<h2>この計算に入っていないもの</h2>
+
+<h3>あなたの目利き</h3>
+<p>
+  10率は<strong>「世間が無選別で出した結果の平均」</strong>です。
+  状態を見て、白かけやセンタリングのずれを弾いてから出しているなら、
+  あなたの実際の 10率はこれより高くなります。逆に、状態を見ずに出しているなら低くなります。
+</p>
+<p>
+  この差が、そのまま利益の正体です。<strong>自分の 10率が平均より上か下かを
+  知らないまま続けるのが、いちばん高くつきます。</strong>
+  平均より上なら、表示された上限より高い素体まで買って合う。
+  下なら、表示どおりに買うと負け続けます。
+</p>
+<p>
+  自分の 10率を出すには、出した枚数と返ってきた等級を記録しておくしかありません。
+  10 枚 20 枚では運の幅が大きいので、<strong>50 枚あたりから傾向が読めます</strong>。
+</p>
+
+<h3>時間</h3>
+<p>
+  鑑定には数か月かかります。その間に相場が下がれば、期待値の前提そのものが崩れます。
+  再販やスターターデッキへの収録が発表されると、素体も PSA10 も落ちます。
+  <strong>鑑定枚数が急に増えている銘柄は、返ってくる頃に供給が厚くなっています。</strong>
+</p>
+
+<h3>キャッシュフロー</h3>
+<p>
+  期待値がプラスでも、数か月間そのお金は動かせません。
+  在庫として抱えている間は、確定申告でも経費になりません
+  （<a href="./kakutei-shinkoku.html">仕入れた分は全部は経費にならない</a>）。
+</p>
+
+<h2>まとめ</h2>
+<ul>
+  <li>倍率ではなく期待値で判断する</li>
+  <li>期待値から鑑定料と手数料を引いた額が、<strong>素体の仕入れ上限</strong></li>
+  <li>10率がすべてを決める。銘柄ごとに必ず確認する</li>
+  <li>自分の 10率を記録して、平均とのずれを知る</li>
+</ul>
+
+<div class="cta">
+  <h2>この計算を、銘柄ごとに自動でやる</h2>
+  <p>
+    <strong>カード台帳</strong>は、銘柄ごとの 10率・9率と相場から上の期待値を計算して、
+    <strong>「素体をいくらまでなら買っていいか」</strong>を出します。
+    鑑定料と売却手数料は自分の条件を入れられます。
+    出した申込の結果を記録すると、<strong>自分の 10率と世間の平均との差</strong>も出ます。
+  </p>
+  <p><a class="btn" href="https://apps.apple.com/jp/app/id6801051349">App Store で見る</a></p>
+</div>
+
+<footer>
+  <a href="./">実務ガイド</a>
+  <a href="../">サポート</a>
+  <a href="../privacy.html">プライバシーポリシー</a>
+</footer>
+
+</body>
+</html>
